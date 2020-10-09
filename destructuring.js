@@ -23,8 +23,10 @@ var carDetails = {
 
 //Code Here
 
-
-
+const {color} = carDetails
+const {make} = carDetails
+const {model} = carDetails
+const {year} = carDetails
 ////////// PROBLEM 2 //////////
 
 /*
@@ -35,7 +37,10 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+let {firstName} = obj
+let {title} = obj
+let {lastName} = obj
+let greeting = () => `Hello, ${title}` + `${firstName}` + `${lastName}` + "!"  
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -54,6 +59,42 @@ function greeting( obj ) {
 */
 
 //Code Here
+// function totalPopulation(object){
+//   const object = {
+//     utah: 1,
+//     california: 2,
+//     texas: 3,
+//     arizona: 4
+//   }
+// }const {utah, california, texas, arizona} =obj;
+// function totalPopulation(){
+//   const object = {
+//     utah:1 ,
+//     california: 2,
+//     texas: 3,
+//     arizona:4
+//   }
+//   var sum = {
+//   if(utah + california + texas + arizona) }
+//   return (totalPopulation)
+// }
+// let {utah} =object
+// let {california} = object
+// let {texas} = object
+// let{arizona} = object
+
+function totalPopulation(object){
+  const {utah} = object
+  const {arizona} = object
+  const {california} = object
+  const {texas} = object
+  const allFourStates = utah + arizona + california + texas
+  return allFourStates
+}
+
+
+
+
 
 
 
@@ -68,7 +109,13 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function ingredients (object) {
+  const {carb} = object
+  const {fat} = object
+  const {protein} = object
+  const newArray = [carb, fat, protein ]
+  return newArray
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -87,7 +134,16 @@ function greeting( obj ) {
 
 //Code Here
 
+function largeNumbers ({first, second, third}){
+  
+  if (first < second && first < third){
+   return first
+   
+} else if(second < first && second < third){
+  return second
+} else {return third}
 
+}
 
 ////////// PROBLEM 6 //////////
 
@@ -98,5 +154,11 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function numberGroups ({a, b, c}){
+  if(a > b && a > c){
+    return a
+  }else if (b > a && b > c){
+    return b
+  } else {return c}
+}
 
