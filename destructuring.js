@@ -148,7 +148,7 @@ function largeNumbers ({first, second, third}){
 ////////// PROBLEM 6 //////////
 
 /*
-  Write a function called numberGroups that will take a destructured object as it's parameter.
+  Write unction called numberGroups that will take a destructured object as it's parameter.
   The object properties will be named a, b, and c and their values will be arrays of numbers.
   Find the longest array and return that array.
 */

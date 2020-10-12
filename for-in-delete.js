@@ -11,13 +11,7 @@
   In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
 */
 
-// var values = {
-//   one: 'These',
-//   two: ' are',
-//   three: ' the',
-//   four: ' property',
-//   five: ' values.'
-// } 
+ //C
 
 // for(var key in values) {
 //   console.log(values[key])
@@ -39,10 +33,15 @@
   Inside the function showValues, write a for in loop that concatenates each of the property values and returns the concatenated string.
 */
 
-function showValues( obj ) {
+function showValues(obj) {
   //Code Here
-}
-
+  
+    let string = ""
+    for (let key in obj) {
+      string += obj[key]
+    }
+    return string 
+  }
 
 
 ////////// PROBLEM 2 //////////
@@ -54,7 +53,19 @@ function showValues( obj ) {
 */
 
 //Code Here
+function greaterThan10 (obj) {
+  
+  for (let key in obj){
+    if(obj[key] >10){
+    obj[key] = 0
+    } 
+  }return obj;
+    
+    
+  
 
+  
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -66,7 +77,12 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function double (obj) {
+  
+  for (let key in obj){
+    obj[key]*=2
+  }return obj
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -80,9 +96,21 @@ function showValues( obj ) {
 */
 
 //Code Here
-
-
-
+// function secrets (obj){
+//  let sting = ""
+//   for(let key in obj){
+  
+//     if(key.includes("sh")){
+//   or if (key[0] === "s" && key[1] === "h")
+//   }
+// }
+function secrets(obj){ 
+  let string = ""
+ for(let prop in obj){   
+   if(prop.includes("sh")){    
+      string += obj[prop];} 
+    } return string 
+  }
 /* 
   Sometimes it's needed to delete object properties. 
   All you need is the word delete before a reference to the object property value. 
@@ -111,7 +139,13 @@ function showValues( obj ) {
 */
 
 //Code Here
-
+function removePassword(obj){
+  delete obj.password;{
+    return obj
+  }
+  
+  
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -131,7 +165,12 @@ var deleteTheBigNumbers = {
 
 //Code Here
 
-
+ for(let prop in deleteTheBigNumbers){
+  if(deleteTheBigNumbers[prop] > 100){
+    delete deleteTheBigNumbers.third;
+    delete deleteTheBigNumbers.fourth;
+  }
+}
 
 ////////// PROBLEM 7 //////////
 
@@ -143,8 +182,14 @@ var deleteTheBigNumbers = {
 */
 
 //Code Here
-
-
+function startsWithK (obj){
+for(let key in obj){
+  if (key[0] === "k"){ 
+  delete obj[key]
+  }
+  
+}return obj
+}
 
 ////////// PROBLEM 8 //////////
 
@@ -159,4 +204,13 @@ var deleteTheBigNumbers = {
 
 //Code Here
 
+  function hiddenTreasure(obj){
+    for(let prop in obj){
+      if(!obj[prop].includes ('treasure')){
+        delete obj[prop]
+      }
+    } return obj
+  }
+
+  
 
