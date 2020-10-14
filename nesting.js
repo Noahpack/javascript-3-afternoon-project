@@ -212,18 +212,8 @@ function looper(){
   
   
   
-  // for (let i = 0; i < numsArr.length; i++){
-  //   for (let j = i+1; j < numsArr.length;j++){
-  //   if(numsArr[i]=== [2,4,6,8,10]){
-  //    numsArr[i].splice(1,1, 'even')
-  //    return numsArr
-  //  }else{if(numsArr[j]=== [1,3,5,7,9,11]){
-  //   numsArr[j].splice(1,1, 'odd')
-  //   return numsArr}
-  // }
-  
-  //  }}
-  // }
+ 
+
  
  
 
